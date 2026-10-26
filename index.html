@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="dark"><title>Shaurya Mittal — Digital Worlds</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0b0b0c;color:#f4f2ee;font:16px/1.45 "Helvetica Neue",Inter,Arial,sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+#pl{position:fixed;inset:0;z-index:100;background:#0b0b0c;display:grid;place-items:center;transition:transform 1s cubic-bezier(.7,0,.2,1)}#pl.x{transform:translateY(-100%)}
+#pw{font:900 clamp(34px,9vw,90px) Arial;letter-spacing:.06em;text-shadow:3px 0 #2f3bff,-3px 0 #ff2a55}
+header{position:fixed;z-index:30;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top)) 18px 14px}
+.logo{background:#f4f2ee;color:#000;font:900 11px/1 Arial;padding:4px 6px}
+nav{display:flex;gap:18px;font-size:13px}nav a{opacity:.7}nav a.on,nav a:hover{opacity:1}
+.v{position:fixed;inset:0;opacity:0;visibility:hidden;transition:opacity .8s,visibility .8s;overflow:auto}.v.on{opacity:1;visibility:visible}
+#h{touch-action:none;overflow:hidden;background:#d9d7d3}
+#p{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;filter:grayscale(1) contrast(1.08);transform:scale(1.06);transition:transform .25s}
+#t{position:absolute;inset:0;mix-blend-mode:color;pointer-events:none}
+.hb{position:absolute;left:0;right:0;bottom:0;padding:110px 20px calc(18px + env(safe-area-inset-bottom));background:linear-gradient(#0000,#0b0b0cf2 55%)}
+.tg{font:700 10px/1.3 Arial;letter-spacing:.14em;margin-bottom:14px}
+.lead{font-size:clamp(17px,2.6vw,30px);line-height:1.25;max-width:660px;letter-spacing:-.01em}
+.cl{margin:22px 0 10px;border-top:1px solid #fff2;padding-top:12px;overflow:hidden;white-space:nowrap}
+.mq{display:inline-block;animation:m 50s linear infinite;font:800 15px Arial;letter-spacing:.04em;color:#fff9}.mq span{margin-right:44px}
+@keyframes m{to{transform:translateX(-50%)}}
+.yr{display:flex;justify-content:space-between;font-size:10px;color:#fff6;letter-spacing:.12em}
+.w{padding:calc(90px + env(safe-area-inset-top)) 20px 60px;max-width:1100px;margin:auto}
+h1{font:400 clamp(46px,11vw,130px)/.98 "Helvetica Neue",Arial;letter-spacing:-.045em;margin:18px 0 60px}
+.ab{font-size:clamp(17px,2.2vw,24px);max-width:720px;color:#cfcdc8;margin-bottom:70px}
+.s{list-style:none;margin-bottom:70px}.s li{font:400 clamp(30px,7vw,64px)/1.15 Arial;letter-spacing:-.035em;color:#8d8b87;transition:.35s;cursor:default}
+.s:hover li{opacity:.3}.s li:hover{opacity:1;color:#fff;padding-left:.4em}
+.st{display:flex;gap:40px;margin-bottom:70px}.st b{display:block;font:300 clamp(40px,8vw,80px)/1 Arial}.st span{font-size:11px;letter-spacing:.12em;color:#8d8b87}
+.k a{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid #fff2;font-size:19px;transition:.3s}.k a:hover{padding-left:12px;color:#7b88ff}
+#pc{width:100%;height:260px;display:block;margin-top:40px}
+#pj{perspective:900px}#g{padding:18vh 0 30vh}
+.c{position:relative;display:block;width:min(86vw,500px);height:60vh;margin:0 auto 7vh;border-radius:6px;overflow:hidden;cursor:pointer;will-change:transform;box-shadow:0 30px 60px #0008}
+.c::before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg at 60% 40%,var(--a),#0000 25%,var(--b),#0000 60%,var(--a));animation:r 26s linear infinite;opacity:.6;filter:blur(30px)}
+.c::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,#fff1 0 1px,#0000 1px 42px),linear-gradient(#0000 45%,#000b)}
+@keyframes r{to{transform:rotate(1turn)}}
+.c i{position:absolute;z-index:1;right:-2%;top:-2%;font:italic 900 min(46vw,250px)/1 Arial;opacity:.2;mix-blend-mode:overlay}
+.c small{position:absolute;z-index:2;left:16px;top:16px;font:700 10px Arial;letter-spacing:.14em}
+.c b{position:absolute;z-index:2;left:16px;right:16px;bottom:16px;font:600 clamp(20px,5vw,28px)/1.08 Arial;letter-spacing:-.02em}
+#dt{position:fixed;z-index:40;left:0;right:0;bottom:0;max-width:640px;margin:auto;padding:26px 22px calc(26px + env(safe-area-inset-bottom));background:#151517;border-radius:18px 18px 0 0;transform:translateY(105%);transition:transform .6s cubic-bezier(.2,.8,.2,1)}#dt.on{transform:none}
+#dt h3{font:500 28px/1.1 Arial;letter-spacing:-.03em;margin:10px 0}#dt p{color:#bdbbb6;margin-bottom:20px}
+.btn{display:inline-block;border:1px solid #fff4;border-radius:99px;padding:11px 20px;font-size:13px;background:none;color:inherit;cursor:pointer;margin-right:8px}.btn:hover{background:#fff;color:#000}
+#bk{position:fixed;inset:0;z-index:60;background:#0b0b0c;padding:calc(24px + env(safe-area-inset-top)) 20px 24px;overflow:auto;opacity:0;visibility:hidden;transition:.5s}#bk.on{opacity:1;visibility:visible}
+.bw{max-width:460px;margin:auto}
+#cg{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:18px 0;text-align:center}#cg u{font-size:10px;color:#8d8b87;text-decoration:none;letter-spacing:.1em}
+#cg button,#sl button{background:#222224;color:inherit;border:0;border-radius:8px;padding:12px 0;font-size:14px;cursor:pointer}#cg button:disabled{opacity:.25}#cg .on,#sl .on{background:#fff;color:#000}
+#sl{display:grid;gap:8px;margin:14px 0 20px}#sl button{border:1px solid #fff2;background:none;border-radius:99px}
+#cu{position:fixed;z-index:200;left:0;top:0;width:16px;height:16px;border-radius:50%;background:#ddd;pointer-events:none;transform:translate(-40px,-40px);transition:width .2s,height .2s}
+#bb{position:fixed;z-index:35;right:18px;top:calc(12px + env(safe-area-inset-top));width:40px;height:40px;border-radius:50%;background:#1b1b1dcc;backdrop-filter:blur(8px);display:grid;place-items:center;font-size:18px}
+body[data-v=h] #bb,body[data-v=pf] header{display:none}body[data-v=pj] nav{margin-right:52px}
+#sk{position:relative;height:min(68vh,560px);width:min(78vw,380px);margin:10px auto 80px;touch-action:pan-y;cursor:grab;user-select:none}
+.ph{position:absolute;inset:0;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,hsl(var(--h) 80% 50%),hsl(calc(var(--h) + 60) 70% 14%));box-shadow:0 24px 50px #0009;will-change:transform}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}.ph em{position:absolute;left:16px;bottom:8px;font:italic 900 84px Arial;opacity:.45}
+#sc{text-align:center;margin:-60px 0 70px;color:#8d8b87}
+.bn{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:70px}.cd{position:relative;height:300px;background:#1a1a1c;border-radius:22px;padding:18px;overflow:hidden;color:#aaa;font-size:14px}.cd span{color:#fff}
+.ap b{position:absolute;width:62px;height:62px;border-radius:16px;display:grid;place-items:center;background:var(--c);color:#fff;font:800 18px Arial;animation:fl 4s ease-in-out infinite alternate}
+.ap b:nth-child(1){left:12%;top:38%;--r:-14deg;color:#000}.ap b:nth-child(2){left:44%;top:22%;--r:12deg}.ap b:nth-child(3){left:60%;top:50%;--r:-8deg}.ap b:nth-child(4){left:20%;top:66%;--r:10deg}.ap b:nth-child(5){left:56%;top:10%;--r:-16deg}
+@keyframes fl{from{transform:translateY(0) rotate(var(--r))}to{transform:translateY(-12px) rotate(calc(var(--r) + 8deg))}}
+.key{position:absolute;left:50%;top:48%;width:120px;height:120px;margin:-40px 0 0 -60px;border-radius:26px;background:linear-gradient(145deg,#7fb2ff,#2342ff 60%,#0a1a80);box-shadow:0 16px 0 #0a1250,0 40px 40px #000a;display:grid;place-items:center;font:900 40px Arial;color:#fff;animation:ky 6s ease-in-out infinite alternate}
+@keyframes ky{from{transform:perspective(500px) rotateX(35deg) rotateZ(-10deg)}to{transform:perspective(500px) rotateX(25deg) rotateZ(10deg)}}
+.s li.a{opacity:1!important;color:#fff;padding-left:.4em}
+.ab0{position:relative;height:100vh;background:#cfcfcf;overflow:hidden}.ab0 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;filter:grayscale(1) contrast(1.1)}
+.abt{position:absolute;left:0;right:0;bottom:0;padding:160px 20px 40px;background:linear-gradient(#0000,#0b0b0cf5 55%);font-size:clamp(17px,2.4vw,24px);color:#e4e2de}.abt p+p{margin-top:16px}
+.cd.tk{height:min(100vw - 40px,460px);margin-bottom:12px;touch-action:pan-y}.cd.kc{height:340px;margin-bottom:12px}.cd p{font-size:19px;color:#fff;position:relative;z-index:2}.kc p{color:#aaa}
+.tl{position:absolute;left:0;top:0;border-radius:22%;display:grid;place-items:center;font:800 clamp(16px,5vw,26px) Arial;touch-action:none;cursor:grab;user-select:none;will-change:transform;box-shadow:0 10px 24px #0006}.tl:active{cursor:grabbing}
+.s li.a::before{content:"";display:inline-block;width:.85em;height:.85em;border-radius:7px;margin-right:.3em;vertical-align:-.08em;background:linear-gradient(135deg,#c6ff2e,#2d6bff)}
+#lib{height:700vh}.stg{position:sticky;top:0;height:100vh;overflow:hidden;background:#000}
+.ly{position:absolute;inset:0;background:linear-gradient(160deg,hsl(var(--h) 70% 42%),hsl(calc(var(--h) + 60) 60% 8%))}.ly img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.ly em{position:absolute;left:20px;bottom:14px;font:italic 900 110px Arial;opacity:.4}
+.ct{position:relative;background:linear-gradient(#0b0b0c,#0a2bd8 45%,#1740ff);padding:90px 20px 110px;overflow:hidden}#pc{position:absolute;inset:0;width:100%;height:100%;margin:0}.cw{position:relative;max-width:1100px;margin:auto}
+.ct h2{font:400 clamp(60px,15vw,160px)/.92 Arial;letter-spacing:-.055em;text-align:center;margin-top:62vh}
+.c{width:100%;height:56vh;margin:0 0 2vh;border-radius:64px/48px;box-shadow:none}.c small{top:auto;bottom:62px;left:20px;font:400 15px Arial;letter-spacing:0;color:#bbb}.c b{left:20px;font-weight:400;font-size:clamp(26px,7vw,38px)}
+.c u{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);background:#1b1b1dd9;padding:14px 22px;border-radius:12px;text-decoration:none;font-size:16px}#g{padding:0 0 30vh}
+</style></head><body>
+<div id=pl><b id=pw>SHAURYA</b></div>
+<header><a class=logo href="#h">SHAURYA<br>MITTAL</a><nav><a href="#pf">Profile</a><a href="#pj">Projects</a><a href="#" id=lt>Let's Talk</a><a href="#" id=sn>♪</a></nav></header><a id=bb href="#h">←</a><i id=cu></i>
+
+<section id=h class="v on"><img id=p src="ss.jpg" alt="Shaurya Mittal" onerror="window.fb&&fb()"><canvas id=t></canvas>
+<div class=hb><p class=tg>✦ HTML5 GODMODE · AI-ASSISTED DIGITAL CREATOR</p>
+<p class=lead>I build digital experiences through independent experimentation, interface design, AI-assisted workflows and iterative web development.</p>
+<div class=cl><div class=mq id=mq></div></div><div class=yr><span>ARCHIVE</span><span>©</span><span>2026</span></div></div></section>
+
+<section id=pf class=v>
+<div class=ab0><img id=ap src="ss.jpg" alt="Shaurya Mittal"><div class=abt><p class=tg>✦ ABOUT</p><p>Shaurya Mittal is a student developer and AI-assisted digital creator, creating independent digital projects since Class 8.</p><p>I build digital experiences through independent experimentation, interface design, AI-assisted workflows and iterative web development.</p></div></div>
+<div class=w style="padding-top:70px"><p class=tg>✦ SERVICES</p><p class=ab>The work moves between interfaces, utility tools, visual concepts, cultural storytelling and small web experiments. Here is a closer look.</p>
+<ul class=s><li>HTML5</li><li>CSS</li><li>JavaScript</li><li>Responsive web design</li><li>AI-assisted development</li><li>Prompt design</li><li>Interface design</li><li>GitHub &amp; deployment</li><li>Digital product experiments</li></ul>
+<div class="cd tk" id=t1><p>Design Toolkit</p></div>
+<div class="cd kc"><p>Archive<br><span>22 Projects</span></p><div class=key>22</div></div>
+<div class="cd tk" id=t2><p>Development Toolkit</p></div>
+<p class=tg>✦ LIBRARY — KEEP SCROLLING</p></div>
+<div id=lib><div class=stg id=stg></div></div>
+<div class=ct><canvas id=pc></canvas><div class=cw><p class=tg>✦ LET'S BUILD SOMETHING MEANINGFUL</p>
+<div class=k><a href="mailto:mittalshaurya66@gmail.com">Email <span>@</span></a><a href="https://github.com/shaurya1233" target=_blank rel=noopener>GitHub <span>↗</span></a><a href="https://www.instagram.com/shaurya_mittal31/" target=_blank rel=noopener>Instagram <span>↗</span></a><a href="https://leetcode.com/u/Qlk0uRwuTh/" target=_blank rel=noopener>LeetCode <span>↗</span></a><a href="https://mastodon.social/@shaurya_dev" target=_blank rel=noopener>Mastodon <span>↗</span></a><a href="https://codepen.io/SHAURYA-MITTAL-the-bashful" target=_blank rel=noopener>CodePen <span>↗</span></a><a href="https://bsky.app/profile/mittalshaurya66-06.bsky.social" target=_blank rel=noopener>Bluesky <span>↗</span></a></div>
+<h2>Ready?<br>Let's talk.</h2></div></div></section>
+
+<section id=pj class=v><div id=g></div></section>
+
+<div id=dt><p class=tg id=dn></p><h3 id=dh></h3><p id=dd></p><a class=btn id=da>Open</a><button class=btn id=dx>Close</button></div>
+
+<div id=bk><div class=bw><p class=tg>✦ LET'S TALK</p><h3 id=mt style="font:400 30px Arial;letter-spacing:-.03em"></h3><div id=cg></div><div style="display:flex;justify-content:space-between;align-items:center"><span id=hf class=btn>12h / 24h</span></div><div id=sl></div><button class=btn id=cf>Confirm by email ↗</button><button class=btn id=bx>Close</button></div></div>
+
+<script>
+const $=i=>document.getElementById(i);
+const P=[
+["MITTAL RESERVE","Brand & Editorial","A premium café and consumer-brand experience: warm editorial typography, product storytelling and a considered digital storefront.","https://shaurya1233.github.io/Mittal-Reserve./"],
+["AUREX: Universal Computation System","Tools & Interface","A broad calculator interface bringing everyday arithmetic and multiple calculation modes into one responsive experience.","https://shaurya1233.github.io/AUREX-MITTAL-CALCULATOR/"],
+["Mittal Reserve — The Private Palazzo","Luxury Digital Experience","An immersive luxury site built around a private Italian palazzo: arrival, the house, gallery, garden, archive and correspondence.","https://mittal-reserve.vercel.app/"],
+["Shaurya OS: Windows 11-inspired","Tools & Interface","A browser-based OS-inspired experiment with desktop metaphors, windows and app layouts. Not Microsoft software.","https://shaurya1233.github.io/WINDOWS-11-Ultimate/"],
+["Obsidian Developers","Creative Technology","A personal technology brand and project archive: AI-assisted development, security themes and restrained visual design.","https://obsidian-developers.vercel.app/"],
+["SZS Ethereal / Quipu","Creative Technology","An experimental web experience using atmosphere, motion and personal storytelling.","https://shaurya1233.github.io/szs-ethereal-Saanvi-/"],
+["Shaurya Aeterna: Digital Sanctuary","Digital Sanctuary","A calm sanctuary concept shaped by contemplative composition and careful atmosphere.","https://shaurya-muzaffarnagar.vercel.app/"],
+["Noir Reserve","Brand & Editorial","A dark editorial brand concept. Destination unavailable until a verified URL is supplied.",""],
+["Mittal Shatranj","Games & Experiments","A chess-themed web project with a heritage-inspired atmosphere.","https://shaurya1233.github.io/SHAURYA-SHATRANJ/"],
+["Eternal Souls","Digital Sanctuary","A quiet memorial-inspired experience with respectful atmosphere and restrained storytelling.","https://eternal-souls.vercel.app/"],
+["EYEKON: Precision in Vision","Brand & Editorial","A brand website for an optical identity, using lens-inspired imagery and clear hierarchy.","https://shaurya1233.github.io/EYEKON-Precision-In-Vision/"],
+["BMW India: Automotive Concept","Mobility & Automotive","An independent high-end car presentation concept. No BMW affiliation implied.","https://shaurya1233.github.io/BMW-INDIA/"],
+["Eternal Impact","Social Impact","A human-centred concept on positive impact and community-minded storytelling.","https://shaurya1233.github.io/shaurya-x-saanvi-eternal-impact./"],
+["Bharat Remembered","Culture & Heritage","A dignified commemorative concept: an eternal roll of honour.","https://shaurya1233.github.io/SHAURYA-MITTAL-BHARAT-REMEMBERED-MEMORIAL./"],
+["Truck Saathi","Mobility & Transport","A practical, driver-oriented concept with multi-language support.","https://truck-saathi-mittal.vercel.app/"],
+["L’Étoile Dorée","Brand & Editorial","A premium restaurant design concept: typography, menu hierarchy and atmosphere.","https://shaurya1233.github.io/restaurant-redesign-by-master-shaurya/"],
+["Shaurya OS: Windows XP-inspired","Tools & Interface","A retro-desktop homage experiment. Not Microsoft software.","https://shaurya1233.github.io/szs/"],
+["Shaurya Aeterna: Digital Atelier","Creative Technology","An atmospheric digital atelier with carefully composed architectural imagery.","https://shaurya1233.github.io/shaurya-aeterna/"],
+["Sanatana: The Living Dharma","Culture & Heritage","A cultural storytelling concept drawing on traditional architecture and quiet composition.","https://shaurya1233.github.io/SHAURYA./"],
+["Shaurya Mittal: Main Portfolio","Creative Technology","A primary portfolio of independent web experiments and interface development.","https://shaurya1233.github.io/Shaurya-Portfolio.../"],
+["Shaurya Mittal: Matter Universe","Creative Technology","An abstract digital-world concept: spatial composition, moving geometry and material depth.","https://shaurya-matter-universe.vercel.app/"],
+["Ashirwad Sanitary & Tiles","Architecture & Retail","A retail showcase for tiles, sanitaryware and bathroom fittings.","https://shaurya1233.github.io/mittal-ashirwad-sanitary-tiles/"]];
+const n2=i=>String(i+1).padStart(2,0);
+
+var ac,on=true;function snd(f,d,v){if(!on)return;try{ac=ac||new AudioContext();const o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime;o.frequency.value=f;g.gain.setValueAtTime(v||.04,t);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g).connect(ac.destination);o.start();o.stop(t+d)}catch(e){}}
+/* routing */
+function go(){const x=location.hash.slice(1),n=x=='pf'||x=='pj'?x:'h';document.querySelectorAll('.v').forEach(e=>e.classList.toggle('on',e.id==n));document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.hash=='#'+n&&n!='h'));$(n).scrollTop=0;$('dt').classList.remove('on');document.body.dataset.v=n;snd(200,.25,.05)}
+onhashchange=go;go();
+
+/* glitch preloader */
+const W='SHAURYA',G='█▚▞▙▜#%&',pw=$('pw');let f=0;
+const iv=setInterval(()=>{f++;pw.textContent=[...W].map((c,i)=>i<f/3?c:G[Math.random()*G.length|0]).join('');if(f>W.length*3+6){clearInterval(iv);setTimeout(()=>$('pl').classList.add('x'),300)}},70);
+
+/* portrait + fallback */
+const pi=$('p');
+window.fb=()=>{pi.onerror=null;pi.src='data:image/svg+xml,'+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 600'><defs><radialGradient id='g' cx='50%' cy='30%'><stop offset='0' stop-color='#ddd'/><stop offset='1' stop-color='#151515'/></radialGradient></defs><rect width='400' height='600' fill='url(#g)'/><circle cx='200' cy='230' r='90' fill='#222'/><path d='M40 600c0-170 70-260 160-260s160 90 160 260z' fill='#222'/><text x='200' y='500' fill='#fff' font-size='64' font-family='Arial' font-weight='900' text-anchor='middle'>SM</text></svg>")};
+if(pi.complete&&!pi.naturalWidth)fb();
+
+/* marquee */
+$('mq').innerHTML=(P.map(p=>`<span>${p[0].split(/[:—]/)[0].toUpperCase()}</span>`).join('')).repeat(2);
+
+/* blue touch trail */
+const T=$('t'),X=T.getContext('2d');let L=[];
+const rs=()=>{T.width=innerWidth;T.height=innerHeight};rs();onresize=rs;
+$('h').onpointermove=e=>{L.push([e.clientX,e.clientY]);pi.style.transform=`scale(1.06) translate(${(e.clientX/innerWidth-.5)*-14}px,${(e.clientY/innerHeight-.5)*-14}px)`};
+(function d(){X.globalCompositeOperation='destination-out';X.fillStyle='rgba(0,0,0,.08)';X.fillRect(0,0,T.width,T.height);X.globalCompositeOperation='source-over';for(const p of L){const g=X.createRadialGradient(p[0],p[1],0,p[0],p[1],110);g.addColorStop(0,'rgba(40,60,255,.6)');g.addColorStop(1,'rgba(40,60,255,0)');X.fillStyle=g;X.fillRect(p[0]-110,p[1]-110,220,220)}L=[];requestAnimationFrame(d)})();
+
+/* curved project gallery */
+const g=$('g'),pj=$('pj');
+P.forEach((p,i)=>{const h=(i*47+200)%360,e=document.createElement('a');e.className='c';e.style.cssText=`--a:hsl(${h} 90% 58%);--b:hsl(${(h+70)%360} 85% 45%);background:hsl(${h} 45% 7%)`;e.innerHTML=`<i>${n2(i)}</i><small>${n2(i)} / 22</small><b>${p[0]}</b>${p[3]?'':'<u>Unavailable</u>'}`;e.onclick=()=>op(i);g.append(e)});
+const cs=[...g.children];
+(function cv(){if(pj.classList.contains('on')){const H=innerHeight;for(const c of cs){const d=(c.offsetTop+c.offsetHeight/2-pj.scrollTop-H/2)/H,a=Math.min(Math.abs(d),1.2);c.style.transform=`rotateX(${-d*26}deg) translateZ(${-a*180}px) scale(${1-a*.1})`;c.style.opacity=1-a*.4}}requestAnimationFrame(cv)})();
+function op(i){const p=P[i],a=$('da');$('dn').textContent=`${n2(i)} / 22 · ${p[1].toUpperCase()}`;$('dh').textContent=p[0];$('dd').textContent=p[2];a.href=p[3]||'#';a.target='_blank';a.rel='noopener';a.textContent=p[3]?'Open project ↗':'Destination unavailable';a.style.opacity=p[3]?1:.4;a.style.pointerEvents=p[3]?'auto':'none';$('dt').classList.add('on')}
+$('dx').onclick=()=>$('dt').classList.remove('on');
+
+/* matrix letters forming a head, on blue */
+const C=$('pc'),Q=C.getContext('2d'),CH='SHAURYAMITTAL01',cols=[];
+(function m(){if($('pf').classList.contains('on')){const q=C.getBoundingClientRect();if(q.bottom>0&&q.top<innerHeight){const w=C.clientWidth,h=C.clientHeight,fs=14,n=Math.ceil(w/fs);if(C.width!=w||C.height!=h){C.width=w;C.height=h}Q.clearRect(0,0,w,h);Q.font=fs+'px monospace';while(cols.length<n)cols.push(Math.random()*h);
+for(let i=0;i<n;i++){cols[i]+=1.3+i%5*.35;const hy=cols[i]%(h+220);for(let j=0;j<14;j++){const y=hy-j*fs;if(y<0||y>h)continue;const dx=(i*fs-w/2)/(w*.3),dy=(y-h*.62)/(h*.2),ins=dx*dx+dy*dy<1;Q.globalAlpha=(1-j/14)*(ins?1:.22);Q.fillStyle=ins?'#c9e4ff':'#4a6bff';Q.fillText(CH[(i*7+j+(cols[i]/fs|0))%CH.length],i*fs,y)}}}}requestAnimationFrame(m)})();
+/* booking calendar */
+const now=new Date(),Y=now.getFullYear(),M=now.getMonth(),TS=['16:30','17:00','17:30','18:00','20:00','20:30'];let sd=null,st=null,h12=true;
+const fm=t=>{if(!h12)return t;const[h,m]=t.split(':');return(h%12||12)+':'+m+(h<12?'am':'pm')};
+function cal(){const first=(new Date(Y,M,1).getDay()+6)%7,days=new Date(Y,M+1,0).getDate();let s=['MON','TUE','WED','THU','FRI','SAT','SUN'].map(d=>`<u>${d}</u>`).join('')+'<span></span>'.repeat(first);for(let d=1;d<=days;d++)s+=`<button ${d<now.getDate()?'disabled':''} class="${d==sd?'on':''}" data-d=${d}>${d}</button>`;$('cg').innerHTML=s;$('mt').textContent=now.toLocaleString('en',{month:'long',year:'numeric'});$('sl').innerHTML=sd?TS.map(t=>`<button class="${t==st?'on':''}" data-t=${t}>${fm(t)}</button>`).join(''):'<p style="color:#8d8b87">Pick a day to see available times.</p>';$('cf').style.opacity=sd&&st?1:.35}
+$('cg').onclick=e=>{if(e.target.dataset.d){sd=+e.target.dataset.d;cal()}};
+$('sl').onclick=e=>{if(e.target.dataset.t){st=e.target.dataset.t;cal()}};
+$('hf').onclick=()=>{h12=!h12;cal()};
+$('cf').onclick=()=>{if(sd&&st)location.href='mailto:mittalshaurya66@gmail.com?subject='+encodeURIComponent(`Let's talk — ${sd}/${M+1}/${Y} ${st}`)};
+$('lt').onclick=e=>{e.preventDefault();cal();$('bk').classList.add('on')};
+$('bx').onclick=()=>$('bk').classList.remove('on');
+/* physics toolkit: grab, throw, collide, reassemble */
+function Tk(card,L){const B=[];let g=null,mx=0,my=0,last=performance.now();
+const W=()=>card.clientWidth,H=()=>card.clientHeight,R=()=>Math.min(46,W()*.13);
+L.forEach((l,i)=>{const e=document.createElement('b');e.className='tl';e.style.background=l[1];e.style.color=l[2]||'#fff';e.textContent=l[0];card.append(e);const b={e,x:W()*(.2+.12*i),y:-70-i*80,vx:0,vy:0,a:Math.random()*2,va:0};B.push(b);
+e.onpointerdown=ev=>{ev.preventDefault();g=b;e.setPointerCapture(ev.pointerId);const q=card.getBoundingClientRect();mx=ev.clientX-q.left;my=ev.clientY-q.top;snd(420,.06,.04)}});
+card.onpointermove=ev=>{if(g){const q=card.getBoundingClientRect();mx=ev.clientX-q.left;my=ev.clientY-q.top}};
+card.onpointerup=card.onpointercancel=()=>{if(g)snd(250,.1,.05);g=null};
+(function f(now){const dt=Math.min(.033,(now-last)/1e3||.016);last=now;if($('pf').classList.contains('on')){const r=R(),w=W(),h=H();
+for(const b of B){const px=b.x,py=b.y;if(b===g){b.x+=(mx-b.x)*Math.min(1,28*dt);b.y+=(my-b.y)*Math.min(1,28*dt);b.vx=(b.x-px)/dt*.6+b.vx*.4;b.vy=(b.y-py)/dt*.6+b.vy*.4;b.va=b.vx*.004}else{b.vy+=1900*dt;b.x+=b.vx*dt;b.y+=b.vy*dt;b.a+=b.va*dt;b.va*=.992}}
+for(let it=0;it<3;it++){for(let i=0;i<B.length;i++)for(let j=i+1;j<B.length;j++){const p=B[i],q=B[j];let dx=q.x-p.x,dy=q.y-p.y,d=Math.hypot(dx,dy)||1;if(d<2*r*.97){const nx=dx/d,ny=dy/d,o=(2*r*.97-d),gi=p===g,gj=q===g;if(!gi&&!gj){p.x-=nx*o/2;p.y-=ny*o/2;q.x+=nx*o/2;q.y+=ny*o/2}else if(gi){q.x+=nx*o;q.y+=ny*o}else{p.x-=nx*o;p.y-=ny*o}
+const vn=(q.vx-p.vx)*nx+(q.vy-p.vy)*ny;if(vn<0){const k=-(1.45)*vn/(gi||gj?1:2);if(!gi){p.vx-=nx*k;p.vy-=ny*k}if(!gj){q.vx+=nx*k;q.vy+=ny*k}p.va+=(Math.random()-.5)*Math.abs(vn)*.004;q.va+=(Math.random()-.5)*Math.abs(vn)*.004;if(it==0&&-vn>350)snd(140+Math.random()*80,.05,Math.min(.05,-vn/20000))}}}
+for(const b of B){if(b===g)continue;if(b.y>h-r){b.y=h-r;if(b.vy>300)snd(110,.06,.03);b.vy*=-.35;b.vx*=.93;b.va=b.vx/r}if(b.x<r){b.x=r;b.vx*=-.45}if(b.x>w-r){b.x=w-r;b.vx*=-.45}}}
+for(const b of B){b.e.style.width=b.e.style.height=2*r+'px';b.e.style.transform=`translate(${b.x-r}px,${b.y-r}px) rotate(${b.a}rad)`}}requestAnimationFrame(f)})(last)}
+Tk($('t1'),[['UI','#c6ff2e','#000'],['AI','#7a3cff'],['RWD','#2d6bff'],['Pr','#2a2a2d'],['Vis','#e5322d'],['Fx','#00b3ff','#001']]);
+Tk($('t2'),[['H5','#f4511e'],['CSS','#2d6bff'],['JS','#f7df1e','#000'],['Git','#222'],['AI','#7a3cff'],['↗','#14e24e','#000']]);
+$('ap').onerror=()=>{$('ap').onerror=null;fb();$('ap').src=pi.src};
+/* photo library: next photo opens from a centre window, 1.jpg to 7.jpg */
+const LY=[];for(let k=0;k<7;k++){const e=document.createElement('div');e.className='ly';e.style.setProperty('--h',(k*47+200)%360);e.innerHTML=`<img src="${k+1}.jpg" alt="Photo ${k+1}" onerror="this.remove()"><em>0${k+1}</em>`;$('stg').append(e);LY.push(e)}
+function lb(){const P=Math.min(6,Math.max(0,-$('lib').getBoundingClientRect().top/innerHeight));LY.forEach((e,k)=>{if(!k)return;const t=Math.min(1,Math.max(0,P-(k-1))),z=t*t*(3-2*t);e.style.visibility=P>=k-1?'visible':'hidden';e.style.clipPath=`inset(${36*(1-z)}%)`;if(e.firstChild.tagName=='IMG')e.firstChild.style.transform=`scale(${1+(1-z)*.3})`})}
+$('pf').addEventListener('scroll',lb,{passive:true});lb();
+/* touch dot, sounds, list highlight */
+addEventListener('pointermove',e=>{$('cu').style.transform=`translate(${e.clientX-8}px,${e.clientY-8}px)`});
+addEventListener('pointerdown',()=>snd(520,.05,.03));
+$('sn').onclick=e=>{e.preventDefault();on=!on;$('sn').textContent=on?'♪':'×'};
+document.querySelector('.s').onpointermove=e=>{document.querySelectorAll('.s li').forEach(l=>l.classList.remove('a'));const t=document.elementFromPoint(e.clientX,e.clientY);if(t&&t.tagName=='LI')t.classList.add('a')};
+</script></body></html>
